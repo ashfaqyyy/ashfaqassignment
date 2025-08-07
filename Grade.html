@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head><title> Grade Sheet </title>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+	
+
+
+		var name = prompt("Enter student's Name");
+		var eng = Number(prompt("Enter English Marks 0-100"));
+		var math = Number(prompt("Enter Math Marks 0-100"));
+		var islam = Number(prompt("Enter Islam Marks 0-100"));
+		var urdu = Number(prompt("Enter Urdu Marks 0-100"));
+		var sci = Number(prompt("Enter Science Marks 0-100"));
+
+		if(eng>100 || eng<0 || math>100 || math<0 || islam>100 || islam<0 || urdu>100 || urdu<0 || sci>100 || sci<0){
+
+			alert("Error: Enter to between (1 - 100) Marks")
+
+		}else{
+
+		var obtained = eng + math + islam + urdu + sci;
+
+		var percentage = (obtained / 500) * 100;
+
+		var grade = "" ;
+		if(percentage>100){
+			grade = "Enter correct Number"
+		}
+		else if(percentage>=80){
+			grade = "A";
+		}
+		else if(percentage>=60){
+			grade = "B"
+		}
+		else if(percentage>=40){
+			grade = "C"
+		}
+		else{
+			grade = "Fail"
+		}
+		document.write("<h1>Student Marksheet</h1>");
+		document.write("Name: " + name + "<br>");
+		document.write("English: " + eng + "<br>");
+		document.write("Math: " + math + "<br>");
+		document.write("Islam: " + islam + "<br>");
+		document.write("Urdu: " + urdu + "<br>");
+		document.write("Science: "+ sci + "<br>");
+		document.write("Obtained: " + obtained + "<br>");
+		document.write("Percentage: " + percentage+ "<br>");
+		document.write("Grade: " + grade + "<br>")
+		}
+
+		
+	</script>
+
+</body>
+</html>
